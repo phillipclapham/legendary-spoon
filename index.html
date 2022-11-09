@@ -1,0 +1,4150 @@
+NEW
+
+<!-- Norix Kiosk -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Norix Kiosk</title>
+    <meta name="description" content="Norix kiosk" />
+    <meta name="author" content="ForeFront Web and Phillip Clapham" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css?v=1.0.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/dok3azj.css" />
+  </head>
+
+  <body>
+    <!-- Main Container -->
+    <div class="loading-container show">
+      <h1>NORIX KIOSK</h1>
+      <p id="loadingVersion">v1.0.1</p>
+      <h2>Application Loading</h2>
+      <p id="loadStatus"></p>
+      <div class="loading-container__progress">
+        <div class="loading-container__progress-full"></div>
+        <div class="loading-container__progress-empty"></div>
+        <div class="loading-container__progress-text"></div>
+      </div>
+      <div class="loadingDots">
+        <span id="loadDot1">.</span>
+        <span id="loadDot2">.</span>
+        <span id="loadDot3">.</span>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Slide Zero - Dashboard -->
+      <div class="slide slide__slide-zero show" data-slidenum="0">
+        <div class="slide__text-box">
+          <div class="slide__slide-zero__videobox">
+            <video
+              autoplay
+              muted
+              controls
+              loop
+              id="dashvid"
+              class="slide-zero-video"
+              poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+            >
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+          <div class="slide__slide-zero__imagebox">
+            <img
+              id="dashimg1"
+              class="slide__slide-zero__imagebox-img show"
+              src=""
+            />
+            <img id="dashimg2" class="slide__slide-zero__imagebox-img" src="" />
+            <img id="dashimg3" class="slide__slide-zero__imagebox-img" src="" />
+            <img id="dashimg4" class="slide__slide-zero__imagebox-img" src="" />
+            <img id="dashimg5" class="slide__slide-zero__imagebox-img" src="" />
+            <img id="dashimg6" class="slide__slide-zero__imagebox-img" src="" />
+            <img id="dashimg7" class="slide__slide-zero__imagebox-img" src="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide One - OID -->
+      <div class="slide slide__slide-one" data-slidenum="1">
+        <div class="slide__text-box">
+          <div class="slide__slide-one__text-box__top">
+            <div class="slide__slide-one__text-box__top__left">
+              <p
+                class="slide__slide-one__text-box__top__text-top"
+                id="acreCount"
+              >
+                0
+              </p>
+              <p
+                class="slide__slide-one__text-box__top__text-bottom"
+                id="acreCountText"
+              >
+                ACRE PROPERTY
+              </p>
+            </div>
+            <div class="slide__slide-one__text-box__top__middle">
+              <p
+                class="slide__slide-one__text-box__top__text-top"
+                id="sqfCount"
+              >
+                0K
+              </p>
+              <p
+                class="slide__slide-one__text-box__top__text-bottom"
+                id="sqfCountText"
+              >
+                SQUARE FEET
+              </p>
+            </div>
+            <div class="slide__slide-one__text-box__top__right">
+              <p
+                class="slide__slide-one__text-box__top__text-top"
+                id="solarCount"
+              >
+                0
+              </p>
+              <p
+                class="slide__slide-one__text-box__top__text-bottom"
+                id="solarCountText"
+              >
+                SOLAR PANELS
+              </p>
+            </div>
+            <hr />
+          </div>
+          <div class="slide__slide-one__text-box__bottom">
+            <div
+              class="slide__slide-one__text-box__bottom__slider"
+              id="slideOneTouch"
+            >
+              <p
+                id="scrollMenuSlot0"
+                class="scrollMenu scrollMenuSlotZero"
+                data-videoid="videoModalSlot1"
+                data-currentpos="0"
+              ></p>
+              <p
+                id="scrollMenuSlot1"
+                class="scrollMenu scrollMenuSlotOne"
+                data-videoid="videoModalSlot2"
+                data-currentpos="1"
+              ></p>
+              <p
+                id="scrollMenuSlot2"
+                class="scrollMenu scrollMenuSlotTwo"
+                data-videoid="videoModalSlot3"
+                data-currentpos="2"
+              ></p>
+              <p
+                id="scrollMenuSlot3"
+                class="scrollMenu scrollMenuSlotThree"
+                data-videoid="videoModalSlot4"
+                data-currentpos="3"
+              ></p>
+              <p
+                id="scrollMenuSlot4"
+                class="scrollMenu scrollMenuSlotFour"
+                data-videoid="videoModalSlot5"
+                data-currentpos="4"
+              ></p>
+              <p
+                id="scrollMenuSlot5"
+                class="scrollMenu scrollMenuSlotFive"
+                data-videoid="videoModalSlot6"
+                data-currentpos="5"
+              ></p>
+              <p
+                id="scrollMenuSlot6"
+                class="scrollMenu scrollMenuSlotSix"
+                data-videoid="videoModalSlot7"
+                data-currentpos="6"
+              ></p>
+            </div>
+          </div>
+
+          <!-- Settings modal access -->
+          <div class="settings-modal" data-modalID="settingspanel"></div>
+        </div>
+      </div>
+
+      <!-- Slide Two - Literature -->
+      <div class="slide slide__slide-two" data-slidenum="2">
+        <div class="slide__text-box">
+          <div class="slide__slide-two__lit-box" id="litBox1">
+            <div class="slide__slide-two__lit-box__top">
+              <h2 id="litblock1titleid"></h2>
+            </div>
+            <div class="slide__slide-two__lit-box__bottom">
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="a1" />
+                <p
+                  id="litblock1slot1id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="a1"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="a1"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="a2" />
+                <p
+                  id="litblock1slot2id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="a2"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="a2"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="a3" />
+                <p
+                  id="litblock1slot3id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="a3"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="a3"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="a4" />
+                <p
+                  id="litblock1slot4id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="a4"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="a4"
+                >
+                  PDF
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide__slide-two__lit-box" id="litBox2">
+            <div class="slide__slide-two__lit-box__top">
+              <h2 id="litblock2titleid"></h2>
+            </div>
+            <div class="slide__slide-two__lit-box__bottom">
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="b1" />
+                <p
+                  id="litblock2slot1id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="b1"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="b1"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="b2" />
+                <p
+                  id="litblock2slot2id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="b2"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="b2"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="b3" />
+                <p
+                  id="litblock2slot3id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="b3"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="b3"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="b4" />
+                <p
+                  id="litblock2slot4id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="b4"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="b4"
+                >
+                  PDF
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide__slide-two__lit-box" id="litBox3">
+            <div class="slide__slide-two__lit-box__top">
+              <h2 id="litblock3titleid">ADDITIONAL RESOURCES</h2>
+            </div>
+            <div class="slide__slide-two__lit-box__bottom">
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="c1" />
+                <p
+                  id="litblock3slot1id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="c1"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="c1"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="c2" />
+                <p
+                  id="litblock3slot2id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="c2"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="c2"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="c3" />
+                <p
+                  id="litblock3slot3id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="c3"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="c3"
+                >
+                  PDF
+                </p>
+              </div>
+              <div class="slide__slide-two__lit-box__bottom__grid">
+                <img src="" data-modalID="c4" />
+                <p
+                  id="litblock3slot4id"
+                  class="slide__slide-two__lit-box__bottom__grid__text"
+                  data-modalID="c4"
+                ></p>
+                <p
+                  class="slide__slide-two__lit-box__bottom__grid__link"
+                  data-modalID="c4"
+                >
+                  PDF
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Three - Videos -->
+      <div class="slide slide__slide-three" data-slidenum="3">
+        <div class="slide__text-box">
+          <div
+            class="slide__slide-three__videobox show"
+            id="vidvid1"
+            data-position="1"
+            data-origpos="1"
+          >
+            <video
+              height="900"
+              width="1600"
+              autoplay
+              muted
+              controls
+              loop
+              class="slide-four-video"
+              poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+            >
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="slide__slide-three__videobox"
+            id="vidvid2"
+            data-position="2"
+            data-origpos="2"
+          >
+            <video
+              height="900"
+              width="1600"
+              muted
+              controls
+              loop
+              class="slide-four-video"
+              poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+            >
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="slide__slide-three__videobox"
+            id="vidvid3"
+            data-position="3"
+            data-origpos="3"
+          >
+            <video
+              height="900"
+              width="1600"
+              muted
+              controls
+              loop
+              class="slide-four-video"
+              poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+            >
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+          <div
+            class="slide__slide-three__videobox"
+            id="vidvid4"
+            data-position="4"
+            data-origpos="4"
+          >
+            <video
+              height="900"
+              width="1600"
+              muted
+              controls
+              loop
+              class="slide-four-video"
+              poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+            >
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+          <div class="slide__slide-three__videobox-menu">
+            <div
+              class="slide__slide-three__videobox-menu-item active"
+              data-position="1"
+            >
+              <p
+                class="slide__slide-three__videobox-menu-item-text active"
+                id="videoslideslot1title"
+                data-position="1"
+              ></p>
+            </div>
+            <div
+              class="slide__slide-three__videobox-menu-item"
+              data-position="2"
+            >
+              <p
+                class="slide__slide-three__videobox-menu-item-text"
+                id="videoslideslot2title"
+                data-position="2"
+              ></p>
+            </div>
+            <div
+              class="slide__slide-three__videobox-menu-item"
+              data-position="3"
+            >
+              <p
+                class="slide__slide-three__videobox-menu-item-text"
+                id="videoslideslot3title"
+                data-position="3"
+              ></p>
+            </div>
+            <div
+              class="slide__slide-three__videobox-menu-item"
+              data-position="4"
+            >
+              <p
+                class="slide__slide-three__videobox-menu-item-text"
+                id="videoslideslot4title"
+                data-position="4"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Four - Green Story -->
+      <div class="slide slide__slide-four" data-slidenum="4">
+        <div class="slide__text-box">
+          <div class="slide__slide-four__infoGBox">
+            <img
+              id="greenstoryimg"
+              class="slide__slide-four__infoGBox-img"
+              src=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Five - Tonik -->
+      <div class="slide slide__slide-five" data-slidenum="5">
+        <div class="slide__text-box">
+          <div class="slide__slide-five__box">
+            <div class="slide__slide-five__box-top">
+              <div class="slide__slide-five__lit-box" id="toniklitBox">
+                <div class="slide__slide-five__lit-box__top">
+                  <h2 id="toniklitblocktitleid"></h2>
+                </div>
+                <div class="slide__slide-five__lit-box__bottom">
+                  <div class="slide__slide-five__lit-box__bottom__grid">
+                    <img src="" data-modalID="ta1" />
+                    <p
+                      id="toniklitblockslot1id"
+                      class="slide__slide-five__lit-box__bottom__grid__text"
+                      data-modalID="ta1"
+                    ></p>
+                    <p
+                      class="slide__slide-five__lit-box__bottom__grid__link"
+                      data-modalID="ta1"
+                    >
+                      PDF
+                    </p>
+                  </div>
+                  <div class="slide__slide-five__lit-box__bottom__grid">
+                    <img src="" data-modalID="ta2" />
+                    <p
+                      id="toniklitblockslot2id"
+                      class="slide__slide-five__lit-box__bottom__grid__text"
+                      data-modalID="ta2"
+                    ></p>
+                    <p
+                      class="slide__slide-five__lit-box__bottom__grid__link"
+                      data-modalID="ta2"
+                    >
+                      PDF
+                    </p>
+                  </div>
+                  <div class="slide__slide-five__lit-box__bottom__grid">
+                    <img src="" data-modalID="ta3" />
+                    <p
+                      id="toniklitblockslot3id"
+                      class="slide__slide-five__lit-box__bottom__grid__text"
+                      data-modalID="ta3"
+                    ></p>
+                    <p
+                      class="slide__slide-five__lit-box__bottom__grid__link"
+                      data-modalID="ta3"
+                    >
+                      PDF
+                    </p>
+                  </div>
+                  <div class="slide__slide-five__lit-box__bottom__grid">
+                    <img src="" data-modalID="ta4" />
+                    <p
+                      id="toniklitblockslot4id"
+                      class="slide__slide-five__lit-box__bottom__grid__text"
+                      data-modalID="ta4"
+                    ></p>
+                    <p
+                      class="slide__slide-five__lit-box__bottom__grid__link"
+                      data-modalID="ta4"
+                    >
+                      PDF
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide__slide-five__box-bottom">
+              <div class="slide-five__box-bottom__slider" id="slideFiveTouch">
+                <p
+                  id="scrollMenu2Slot0"
+                  class="scrollMenu2 scrollMenu2SlotZero"
+                  data-videoid="videoModalSlot21"
+                  data-currentpos="0"
+                ></p>
+                <p
+                  id="scrollMenu2Slot1"
+                  class="scrollMenu2 scrollMenu2SlotOne"
+                  data-videoid="videoModalSlot22"
+                  data-currentpos="1"
+                ></p>
+                <p
+                  id="scrollMenu2Slot2"
+                  class="scrollMenu2 scrollMenu2SlotTwo"
+                  data-videoid="videoModalSlot23"
+                  data-currentpos="2"
+                ></p>
+                <p
+                  id="scrollMenu2Slot3"
+                  class="scrollMenu2 scrollMenu2SlotThree"
+                  data-videoid="videoModalSlot24"
+                  data-currentpos="3"
+                ></p>
+                <p
+                  id="scrollMenu2Slot4"
+                  class="scrollMenu2 scrollMenu2SlotFour"
+                  data-videoid="videoModalSlot25"
+                  data-currentpos="4"
+                ></p>
+                <p
+                  id="scrollMenu2Slot5"
+                  class="scrollMenu2 scrollMenu2SlotFive"
+                  data-videoid="videoModalSlot26"
+                  data-currentpos="5"
+                ></p>
+                <p
+                  id="scrollMenu2Slot6"
+                  class="scrollMenu2 scrollMenu2SlotSix"
+                  data-videoid="videoModalSlot27"
+                  data-currentpos="6"
+                ></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide Six - Web -->
+      <div class="slide slide__slide-six" data-slidenum="6">
+        <div class="slide__text-box">
+          <div class="slide__slide-six__linkbox">
+            <div
+              class="slide__slide-six__linkbox-top"
+              data-gotourl="https://norix.com"
+              data-linkname="NORIX WEBSITE"
+            ></div>
+            <div
+              class="slide__slide-six__linkbox-bottom"
+              data-gotourl="https://tonikworld.com"
+              data-linkname="TONIK WORLD WEBSITE"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar__heading">
+          <h1 id="sidebarHeading" class="">NORIX</h1>
+        </div>
+        <div class="sidebar__navcon">
+          <div class="sidebar__navbox">
+            <div
+              id="dot-zero"
+              class="sidebar__navbox__dot filled"
+              data-dotnum="0"
+            ></div>
+            <div
+              id="dot-one"
+              class="sidebar__navbox__dot"
+              data-dotnum="1"
+            ></div>
+            <div
+              id="dot-two"
+              class="sidebar__navbox__dot"
+              data-dotnum="2"
+            ></div>
+            <div
+              id="dot-three"
+              class="sidebar__navbox__dot"
+              data-dotnum="3"
+            ></div>
+            <div
+              id="dot-four"
+              class="sidebar__navbox__dot"
+              data-dotnum="4"
+            ></div>
+            <div
+              id="dot-five"
+              class="sidebar__navbox__dot"
+              data-dotnum="5"
+            ></div>
+            <div
+              id="dot-six"
+              class="sidebar__navbox__dot"
+              data-dotnum="6"
+            ></div>
+          </div>
+          <div class="sidebar__navright">
+            <p
+              id="dotZeroText"
+              class="sidebar__navbox__dot-text active"
+              data-dotnum="0"
+            >
+              Dashboard
+            </p>
+            <p
+              id="dotOneText"
+              class="sidebar__navbox__dot-text"
+              data-dotnum="1"
+            >
+              OID
+            </p>
+            <p
+              id="dotTwoText"
+              class="sidebar__navbox__dot-text"
+              data-dotnum="2"
+            >
+              Literature
+            </p>
+            <p
+              id="dotThreeText"
+              class="sidebar__navbox__dot-text"
+              data-dotnum="3"
+            >
+              Videos
+            </p>
+            <p
+              id="dotFourText"
+              class="sidebar__navbox__dot-text"
+              data-dotnum="4"
+            >
+              Green Story
+            </p>
+            <p
+              id="dotFiveText"
+              class="sidebar__navbox__dot-text"
+              data-dotnum="5"
+            >
+              Tonik
+            </p>
+            <p
+              id="dotSixText"
+              class="sidebar__navbox__dot-text"
+              data-dotnum="6"
+            >
+              Web
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Modal -->
+    <div id="masterModal" class="kioskModal">
+      <div class="kioskModal__content">
+        <span class="kioskModal__content__close">&times;</span>
+        <h2>NORIX</h2>
+
+        <!-- PDF modals -->
+        <div class="kioskModal__content__inner pdfmodal" id="a1">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="a2">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="a3">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="a4">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="kioskModal__content__inner pdfmodal" id="b1">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="b2">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="b3">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="b4">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="kioskModal__content__inner pdfmodal" id="c1">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="c2">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="c3">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+        <div class="kioskModal__content__inner pdfmodal" id="c4">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="kioskModal__content__inner pdfmodal" id="ta1">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="kioskModal__content__inner pdfmodal" id="ta2">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="kioskModal__content__inner pdfmodal" id="ta3">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div class="kioskModal__content__inner pdfmodal" id="ta4">
+          <div class="kioskModal__content__inner-pdf">
+            <iframe
+              frameborder="0"
+              scrolling="no"
+              width="1824"
+              height="924"
+              src=""
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div class="kioskModal__content__inner" id="settingspanel">
+          <div class="kioskModal__content__inner__top">
+            <div class="kioskModal__content__inner__top-top show">
+              <p
+                class="kioskModal__content__inner__top-top-text"
+                id="passEnter"
+              >
+                ENTER PASSWORD:
+              </p>
+              <div
+                id="pwPanelBox"
+                class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text__pw"
+                data-action="password"
+              >
+                <p
+                  class="kioskModal__content__inner__top-top-text kioskModal__content__inner__top-top-text-input"
+                  id="pwPanel"
+                ></p>
+              </div>
+            </div>
+            <div class="kioskModal__content__inner__top-top inner">
+              <!-- BOOKMARKS -->
+              <div
+                id="settings-bookmark-box"
+                class="kioskModal__content__inner__top-top-box"
+              >
+                <p
+                  class="kioskModal__content__inner__top-top-text settingsheading"
+                >
+                  DIRECTORY:
+                </p>
+                <hr />
+                <div
+                  class="kioskModal__content__inner__top-top-box-row directory"
+                >
+                  <p
+                    id="settings-bookmark-dashboard-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Dashboard Layout
+                  </p>
+                  <p
+                    id="settings-bookmark-oidmenutext-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    OID Menu Text
+                  </p>
+                  <p
+                    id="settings-bookmark-litblocktitles-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Literature Block Titles
+                  </p>
+                  <p
+                    id="settings-bookmark-litblockslottitles-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Literature Block Slot Titles
+                  </p>
+                  <p
+                    id="settings-bookmark-videovideo1-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Video Screen Titles
+                  </p>
+                  <p
+                    id="settings-bookmark-tonikblocktitle-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Tonik Literature Block Title
+                  </p>
+                  <p
+                    id="settings-bookmark-litblockslottitles-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Tonik Literature Block Slot Titles
+                  </p>
+                  <p
+                    id="settings-tonikvideoblockslot1-title-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Tonik Video Block Slot Titles
+                  </p>
+                  <p
+                    id="settings-bookmark-dashmedialinks-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Dashboard Media Links
+                  </p>
+                  <p
+                    id="settings-bookmark-oidvidlinks-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    OID Video Links
+                  </p>
+                  <p
+                    id="settings-bookmark-litblockcovers-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Literature Screen Cover Images
+                  </p>
+                  <p
+                    id="settings-bookmark-litblockpdfs-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Literature Screen PDF Links
+                  </p>
+                  <p
+                    id="settings-bookmark-videolinks-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Video Screen Links
+                  </p>
+                  <p
+                    id="settings-bookmark-greenstorylink-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Green Story Image Link
+                  </p>
+                  <p
+                    id="settings-bookmark-tonikcovers-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Tonik Screen Cover Images
+                  </p>
+                  <p
+                    id="settings-bookmark-tonikpdfs-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Tonik Screen PDF Links
+                  </p>
+                  <p
+                    id="settings-tonikvideo1-link-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Tonik Screen Video Links
+                  </p>
+                  <p
+                    id="settings-bookmark-weblinks-go"
+                    class="kioskModal__content__inner__top-top-text settingsbody link"
+                  >
+                    Web Screen Links
+                  </p>
+                </div>
+              </div>
+              <!-- LAYOUT SETTINGS -->
+              <div class="kioskModal__content__inner__top-top-box">
+                <p
+                  class="kioskModal__content__inner__top-top-text settingsheading"
+                >
+                  LAYOUT SETTINGS
+                </p>
+                <hr />
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Dashboard Layout:
+                </p>
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-dashboard"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Default View:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right-no"
+                    data-action="setting"
+                  >
+                    <div
+                      class="radio-circle"
+                      id="settings-slideorvideo-slide"
+                    ></div>
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                    >
+                      Slideshow
+                    </p>
+                    <div
+                      class="radio-circle"
+                      id="settings-slideorvideo-video"
+                    ></div>
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                    >
+                      Video
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- CONTENT SETTINGS -->
+              <div class="kioskModal__content__inner__top-top-box">
+                <p
+                  class="kioskModal__content__inner__top-top-text settingsheading"
+                >
+                  CONTENT TEXT
+                </p>
+                <hr />
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  OID Rotating Menu Text:
+                </p>
+                <!-- OID Slot 1 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-oidmenutext"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 1 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot1"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 2 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 2 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot2"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 3 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 3 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot3"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 4 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 4 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot4"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 5 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 5 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot5"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 6 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 6 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot6"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 7 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 7 Text:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot7"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Literature Screen Block Titles:
+                </p>
+
+                <!-- Literature Screen Block 1 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-litblocktitles"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 1 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 2 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 2 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 3 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 3 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading spacer"
+                >
+                  Literature Screen - Block 1 Slot Titles:
+                </p>
+
+                <!-- Literature Screen Block 1 Slot 1 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 1 - Slot 1 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 1 Slot 2 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 1 - Slot 2 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 1 Slot 3 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 1 - Slot 3 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 1 Slot 4 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 1 - Slot 4 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot4-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading spacer"
+                >
+                  Literature Screen - Block 2 Slot Titles:
+                </p>
+
+                <!-- Literature Screen Block 2 Slot 1 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 2 - Slot 1 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 2 Slot 2 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 2 - Slot 2 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 2 Slot 3 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 2 - Slot 3 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 2 Slot 4 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 2 - Slot 4 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot4-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading spacer"
+                >
+                  Literature Screen - Block 3 Slot Titles:
+                </p>
+
+                <!-- Literature Screen Block 3 Slot 1 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 3 - Slot 1 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 3 Slot 2 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 3 - Slot 2 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 3 Slot 3 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 3 - Slot 3 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Literature Screen Block 3 Slot 4 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Literature - Block 3 - Slot 4 Title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot4-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Video Screen - Video Titles:
+                </p>
+
+                <!-- Video screen video title 1 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikblocktitle"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 1 title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-videovideo1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Video screen video title 2 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikblocktitle"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 2 title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-videovideo2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Video screen video title 3 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikblocktitle"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 3 title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-videovideo3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Video screen video title 4 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikblocktitle"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 4 title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-videovideo4-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Tonik Screen - PDF Block Title:
+                </p>
+
+                <!-- Tonik Screen PDF Block Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikblocktitle"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - PDF block title:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdfblock-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Tonik Screen - PDF Slot Titles:
+                </p>
+
+                <!-- Tonik Screen PDF Block Slot 1 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-litblockslottitles"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - PDF Block - Slot title 1:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdfblockslot1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen PDF Block Slot 2 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - PDF Block - Slot title 2:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdfblockslot2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen PDF Block Slot 3 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - PDF Block - Slot title 3:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdfblockslot3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen PDF Block Slot 4 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - PDF Block - Slot title 4:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdfblockslot4-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Tonik Screen - Video Block Slot Titles:
+                </p>
+
+                <!-- Tonik Screen Video Slot 1 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 1:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot1-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen Video Slot 2 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 2:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot2-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen Video Slot 3 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 3:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot3-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen Video Slot 4 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 4:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot4-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen Video Slot 5 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 5:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot5-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen Video Slot 6 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 6:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot6-title"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik Screen Video Slot 7 Title -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik - Video Block - Slot title 7:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideoblockslot7-title"
+                    ></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LINK SETTINGS -->
+              <div class="kioskModal__content__inner__top-top-box">
+                <p
+                  class="kioskModal__content__inner__top-top-text settingsheading"
+                >
+                  CONTENT LINKS
+                </p>
+                <hr />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Dashboard Media Links:
+                </p>
+                <!-- Dashboard Video Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-dashmedialinks"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashvid-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 1 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 1 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg1-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 2 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 2 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg2-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 3 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 3 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg3-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 4 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 4 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg4-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 5 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 5 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg5-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 6 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 6 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg6-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Dashboard Slide 7 Link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Dashboard - Slide 7 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-dashimg7-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  OID Video Links:
+                </p>
+                <!-- OID Slot 1 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-oidvidlinks"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 1 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot1-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 2 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 2 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot2-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 3 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 3 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot3-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 4 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 4 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot4-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 5 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 5 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot5-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 6 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 6 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot6-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- OID Slot 7 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      OID Slot 7 Video Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-oidslot7-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Literature Screen - Block 1 Cover Images:
+                </p>
+
+                <!-- Lit Screen - Block 1 cover images -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-litblockcovers"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 1 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot1-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 2 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot2-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 3 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot3-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 4 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot4-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading spacer"
+                >
+                  Literature Screen - Block 2 Cover Images:
+                </p>
+
+                <!-- Lit Screen - Block 2 cover images -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 1 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot1-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 2 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot2-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 3 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot3-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 4 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot4-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading spacer"
+                >
+                  Literature Screen - Block 3 Cover Images:
+                </p>
+
+                <!-- Lit Screen - Block 3 cover images -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 1 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot1-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 2 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot2-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 3 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot3-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 4 Image:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot4-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading spacer"
+                >
+                  Literature Screen - Block 1 PDF Links:
+                </p>
+
+                <!-- Lit Screen - Block 1 pdf links -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-litblockpdfs"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 1 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot1-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 2 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot2-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 3 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot3-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 1 - Slot 4 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock1slot4-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Lit Screen - Block 2 pdf links -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 1 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot1-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 2 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot2-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 3 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot3-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 2 - Slot 4 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock2slot4-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Lit Screen - Block 3 pdf links -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 1 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot1-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 2 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot2-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 3 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot3-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Block 3 - Slot 4 Link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-litblock3slot4-pdf"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Video Screen Video Links:
+                </p>
+
+                <!-- Video slide - vid 1 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-videolinks"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 1 link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-vidvid1-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Video slide - vid 2 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 2 link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-vidvid2-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Video slide - vid 3 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 3 link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-vidvid3-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Video slide - vid 4 -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Video screen - video 4 link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-vidvid4-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Green Story Graphic Link:
+                </p>
+
+                <!-- Green story link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-greenstorylink"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Green Story link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-green-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Tonik Slide - PDF Block - Slot Image Links:
+                </p>
+
+                <!-- Tonik slide pdf block slot 1 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikcovers"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 1 image link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf1-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide pdf block slot 2 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 2 image link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf2-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide pdf block slot 3 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 3 image link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf3-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide pdf block slot 4 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 4 image link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf4-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Tonik Slide - PDF Block - Slot PDF Links:
+                </p>
+
+                <!-- Tonik slide pdf block slot 1 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-tonikpdfs"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 1 PDF link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf1-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide pdf block slot 2 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 2 PDF link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf2-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide pdf block slot 3 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 3 PDF link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf3-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide pdf block slot 4 image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - PDF block - slot 4 PDF link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikpdf4-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Tonik Screen Video Links:
+                </p>
+
+                <!-- Tonik slide video 1 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 1 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo1-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide video 2 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 2 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo2-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide video 3 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 3 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo3-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide video 4 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 4 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo4-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide video 5 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 5 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo5-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide video 6 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 6 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo6-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Tonik slide video 7 link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Tonik slide - Video block - slot 7 video link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-tonikvideo7-link"
+                    ></p>
+                  </div>
+                </div>
+
+                <hr class="settings-hr" />
+
+                <p
+                  class="kioskModal__content__inner__top-top-text settingssubheading"
+                >
+                  Web Slide Links:
+                </p>
+
+                <!-- Web slide top image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      id="settings-bookmark-weblinks"
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Web slide - Top box image link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-webtop-image"
+                    ></p>
+                  </div>
+                </div>
+
+                <!-- Web slide bottom image link -->
+                <div class="kioskModal__content__inner__top-top-box-row">
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box-left"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbody"
+                    >
+                      Web slide - Bottom box image link:
+                    </p>
+                  </div>
+                  <div
+                    class="kioskModal__content__inner__top-top-text-box kioskModal__content__inner__top-top-text-box-right"
+                    data-action="setting"
+                  >
+                    <p
+                      class="kioskModal__content__inner__top-top-text settingsbox kioskModal__content__inner__top-top-text-input kioskModal__content__inner__top-top-text-input-text"
+                      id="settings-webbottom-image"
+                    ></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kioskModal__buttonrow">
+                <div
+                  id="kioskButtonScroll"
+                  class="kioskModal__buttonrow__button"
+                  data-settingsaction="scroll"
+                >
+                  <p data-settingsaction="scroll">Scroll To Top</p>
+                </div>
+                <div
+                  id="kioskButtonSave"
+                  class="kioskModal__buttonrow__button"
+                  data-settingsaction="save"
+                >
+                  <p data-settingsaction="save">Save</p>
+                </div>
+                <div
+                  id="kioskButtonCancel"
+                  class="kioskModal__buttonrow__button"
+                  data-settingsaction="cancel"
+                >
+                  <p data-settingsaction="cancel">Cancel</p>
+                </div>
+                <div
+                  id="kioskButtonReset"
+                  class="kioskModal__buttonrow__button"
+                  data-settingsaction="reset"
+                >
+                  <p data-settingsaction="reset">Reset App Memory</p>
+                </div>
+              </div>
+            </div>
+            <!-- Scroll To Top / Bottom -->
+            <div class="kioskModal__content__inner__top-top-scrollBox">
+              <div
+                class="kioskModal__content__inner_top-top-scroll double"
+                data-touchaction="totop"
+                data-touchsource="div"
+              >
+                <img
+                  class="kioskModal__content__inner_top-top-scroll-img"
+                  src="media/img/double-caret-up.png"
+                  data-touchaction="totop"
+                  data-touchsource="img"
+                />
+              </div>
+              <div
+                class="kioskModal__content__inner_top-top-scroll two"
+                data-touchaction="scrollup"
+                data-touchsource="div"
+              >
+                <img
+                  class="kioskModal__content__inner_top-top-scroll-img"
+                  src="media/img/caret-up.png"
+                  data-touchaction="scrollup"
+                  data-touchsource="img"
+                />
+              </div>
+              <div
+                class="kioskModal__content__inner_top-top-scroll three"
+                data-touchaction="scrolldown"
+                data-touchsource="div"
+              >
+                <img
+                  class="kioskModal__content__inner_top-top-scroll-img flip"
+                  src="media/img/caret-up.png"
+                  data-touchaction="scrolldown"
+                  data-touchsource="img"
+                />
+              </div>
+              <div
+                class="kioskModal__content__inner_top-top-scroll four double"
+                data-touchaction="tobottom"
+                data-touchsource="div"
+              >
+                <img
+                  class="kioskModal__content__inner_top-top-scroll-img flip"
+                  src="media/img/double-caret-up.png"
+                  data-touchaction="tobottom"
+                  data-touchsource="img"
+                />
+              </div>
+            </div>
+
+            <div class="kioskModal__content__inner__top-bottom">
+              <div class="kioskModal__content__inner__top-bottom-keyboard">
+                <div class="keyboard-row-1">
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-1"
+                    data-keydatalower="1"
+                    data-keydataupper="1"
+                  >
+                    <p class="keyboard-letter">1</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-2"
+                    data-keydatalower="2"
+                    data-keydataupper="2"
+                  >
+                    <p class="keyboard-letter">2</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-3"
+                    data-keydatalower="3"
+                    data-keydataupper="3"
+                  >
+                    <p class="keyboard-letter">3</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-4"
+                    data-keydatalower="4"
+                    data-keydataupper="4"
+                  >
+                    <p class="keyboard-letter">4</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-5"
+                    data-keydatalower="5"
+                    data-keydataupper="5"
+                  >
+                    <p class="keyboard-letter">5</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-6"
+                    data-keydatalower="6"
+                    data-keydataupper="6"
+                  >
+                    <p class="keyboard-letter">6</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-7"
+                    data-keydatalower="7"
+                    data-keydataupper="7"
+                  >
+                    <p class="keyboard-letter">7</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-8"
+                    data-keydatalower="8"
+                    data-keydataupper="8"
+                  >
+                    <p class="keyboard-letter">8</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-9"
+                    data-keydatalower="9"
+                    data-keydataupper="9"
+                  >
+                    <p class="keyboard-letter">9</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-0"
+                    data-keydatalower="0"
+                    data-keydataupper="0"
+                  >
+                    <p class="keyboard-letter">0</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-delete"
+                    data-keydatalower="delete"
+                    data-keydataupper="delete"
+                  >
+                    <img
+                      class="keyboard-letter"
+                      src="media/img/backspace.png"
+                    />
+                  </div>
+                </div>
+                <div class="keyboard-row-2">
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-q"
+                    data-keydatalower="q"
+                    data-keydataupper="Q"
+                  >
+                    <p class="keyboard-letter">q</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-w"
+                    data-keydatalower="w"
+                    data-keydataupper="W"
+                  >
+                    <p class="keyboard-letter">w</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-e"
+                    data-keydatalower="e"
+                    data-keydataupper="E"
+                  >
+                    <p class="keyboard-letter">e</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-r"
+                    data-keydatalower="r"
+                    data-keydataupper="R"
+                  >
+                    <p class="keyboard-letter">r</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-t"
+                    data-keydatalower="t"
+                    data-keydataupper="T"
+                  >
+                    <p class="keyboard-letter">t</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-y"
+                    data-keydatalower="y"
+                    data-keydataupper="Y"
+                  >
+                    <p class="keyboard-letter">y</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-u"
+                    data-keydatalower="u"
+                    data-keydataupper="U"
+                  >
+                    <p class="keyboard-letter">u</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-i"
+                    data-keydatalower="i"
+                    data-keydataupper="I"
+                  >
+                    <p class="keyboard-letter">i</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-o"
+                    data-keydatalower="o"
+                    data-keydataupper="O"
+                  >
+                    <p class="keyboard-letter">o</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-p"
+                    data-keydatalower="p"
+                    data-keydataupper="P"
+                  >
+                    <p class="keyboard-letter">p</p>
+                  </div>
+                </div>
+                <div class="keyboard-row-3">
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-caps"
+                    data-keydatalower="caps"
+                    data-keydataupper="caps"
+                  >
+                    <img class="keyboard-letter" src="media/img/capslock.png" />
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-a"
+                    data-keydatalower="a"
+                    data-keydataupper="A"
+                  >
+                    <p class="keyboard-letter">a</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-s"
+                    data-keydatalower="s"
+                    data-keydataupper="S"
+                  >
+                    <p class="keyboard-letter">s</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-d"
+                    data-keydatalower="d"
+                    data-keydataupper="D"
+                  >
+                    <p class="keyboard-letter">d</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-f"
+                    data-keydatalower="f"
+                    data-keydataupper="F"
+                  >
+                    <p class="keyboard-letter">f</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-g"
+                    data-keydatalower="g"
+                    data-keydataupper="G"
+                  >
+                    <p class="keyboard-letter">g</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-h"
+                    data-keydatalower="h"
+                    data-keydataupper="H"
+                  >
+                    <p class="keyboard-letter">h</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-j"
+                    data-keydatalower="j"
+                    data-keydataupper="J"
+                  >
+                    <p class="keyboard-letter">j</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-k"
+                    data-keydatalower="k"
+                    data-keydataupper="K"
+                  >
+                    <p class="keyboard-letter">k</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-l"
+                    data-keydatalower="l"
+                    data-keydataupper="L"
+                  >
+                    <p class="keyboard-letter">l</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-enter"
+                    data-keydatalower="enter"
+                    data-keydataupper="enter"
+                  >
+                    <img class="keyboard-letter" src="media/img/enterkey.png" />
+                  </div>
+                </div>
+                <div class="keyboard-row-4">
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-z"
+                    data-keydatalower="z"
+                    data-keydataupper="Z"
+                  >
+                    <p class="keyboard-letter">z</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-x"
+                    data-keydatalower="x"
+                    data-keydataupper="X"
+                  >
+                    <p class="keyboard-letter">x</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-c"
+                    data-keydatalower="c"
+                    data-keydataupper="C"
+                  >
+                    <p class="keyboard-letter">c</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-v"
+                    data-keydatalower="v"
+                    data-keydataupper="V"
+                  >
+                    <p class="keyboard-letter">v</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-b"
+                    data-keydatalower="b"
+                    data-keydataupper="B"
+                  >
+                    <p class="keyboard-letter">b</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-n"
+                    data-keydatalower="n"
+                    data-keydataupper="N"
+                  >
+                    <p class="keyboard-letter">n</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-m"
+                    data-keydatalower="m"
+                    data-keydataupper="M"
+                  >
+                    <p class="keyboard-letter">m</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-comma"
+                    data-keydatalower=","
+                    data-keydataupper="/"
+                  >
+                    <p class="keyboard-letter">,</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-period"
+                    data-keydatalower="."
+                    data-keydataupper=":"
+                  >
+                    <p class="keyboard-letter">.</p>
+                  </div>
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-question"
+                    data-keydatalower="?"
+                    data-keydataupper="!"
+                  >
+                    <p class="keyboard-letter">?</p>
+                  </div>
+                </div>
+                <div class="keyboard-row-5">
+                  <div
+                    class="keyboard-key"
+                    id="keyboard-space"
+                    data-keydatalower="space"
+                    data-keydataupper="space"
+                  >
+                    <img class="keyboard-letter" src="media/img/spacebar.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="kioskModal__content__inner__bottom">
+            <p class="kioskModal__content__inner__bottom__text__credit">
+              Design by ForeFront Web | v1.0.1
+            </p>
+            <p class="kioskModal__content__inner__bottom__text__credit">
+              &copy; <span id="designYear"></span> All Rights Reserved |
+              <span id="designCRName">Norix Group Inc.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Video Modals -->
+        <div class="kioskModal__content__inner" id="videoModalSlot1">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot2">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source
+              src="media/video/Launch Your Career, With Norix Furniture.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot3">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source
+              src="media/video/Launch Your Career, With Norix Furniture.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot4">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source
+              src="media/video/Launch Your Career, With Norix Furniture.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot5">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source
+              src="media/video/Launch Your Career, With Norix Furniture.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot6">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source
+              src="media/video/Launch Your Career, With Norix Furniture.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot7">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source
+              src="media/video/Launch Your Career, With Norix Furniture.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p class="vid-coming-soon">Video Coming Soon</p>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot21">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot22">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot23">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot24">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot25">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot26">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="kioskModal__content__inner" id="videoModalSlot27">
+          <video
+            height="900"
+            width="1800"
+            controls
+            loop
+            class="slide-three-video"
+            poster="https://norix.com/wp-content/uploads/2022/03/NORIX_Entrance_Southend.webp"
+          >
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Web modals -->
+        <div class="kioskModal__content__inner" id="webmodal">
+          <iframe src="" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scripts.js?v=1.0.0"></script>
+  </body>
+</html>
