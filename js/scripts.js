@@ -3406,7 +3406,7 @@ function kioskLoad() {
 const winCon = document.querySelector(".container");
 const loadCon = document.querySelector(".loading-container");
 // Clear localstorage on every run - testing only - comment out for production
-localStorage.clear();
+//localStorage.clear();
 kioskInitialize();
 setTimeout(() => {
   loadCon.classList.toggle("show");
