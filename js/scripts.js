@@ -329,7 +329,8 @@ function kioskInitialize() {
   }
   let oidslot3link = localStorage.getItem("oidslot3link");
   if (!oidslot3link) {
-    oidslot3link = "https://norix.com/wp-content/uploads/2022/04/standby.mp4";
+    oidslot3link =
+      "https://norix.com/wp-content/uploads/2022/11/launch_your_career_with_norix_furniture-1080p.mp4";
     localStorage.setItem("oidslot3link", oidslot3link);
   }
   let oidslot4link = localStorage.getItem("oidslot4link");
