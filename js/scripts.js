@@ -882,10 +882,10 @@ function kioskInitialize() {
   document.querySelector("#litblock3slot4id").innerHTML = litblock3slot4title;
 
   // Video slide video titles
-  document.querySelector("#videoslideslot1title").innerHTML = videovideo1;
-  document.querySelector("#videoslideslot2title").innerHTML = videovideo2;
-  document.querySelector("#videoslideslot3title").innerHTML = videovideo3;
-  document.querySelector("#videoslideslot4title").innerHTML = videovideo4;
+  document.querySelector("#scrollMenuSlot03").innerHTML = videovideo1;
+  document.querySelector("#scrollMenuSlot13").innerHTML = videovideo2;
+  document.querySelector("#scrollMenuSlot23").innerHTML = videovideo3;
+  document.querySelector("#scrollMenuSlot33").innerHTML = videovideo4;
 
   // Tonik PDF block title
   document.querySelector("#toniklitblocktitleid").innerText =
@@ -1020,10 +1020,10 @@ function kioskInitialize() {
   document.querySelector("#c4").querySelector("iframe").src = litblock3slot4pdf;
 
   // Video slide links
-  document.querySelector("#vidvid1 video").src = vidvid1link;
-  document.querySelector("#vidvid2 video").src = vidvid2link;
-  document.querySelector("#vidvid3 video").src = vidvid3link;
-  document.querySelector("#vidvid4 video").src = vidvid4link;
+  document.querySelector("#videoModalSlot31 video").src = vidvid1link;
+  document.querySelector("#videoModalSlot32 video").src = vidvid2link;
+  document.querySelector("#videoModalSlot33 video").src = vidvid3link;
+  document.querySelector("#videoModalSlot34 video").src = vidvid4link;
 
   // Green Story link
   document.querySelector("#greenstoryimg").src = greenlink;
@@ -1094,7 +1094,6 @@ function kioskLoad() {
   let solarCount = document.querySelector("#solarCount");
   const litBox1 = document.querySelector("#litBox1");
   const litBox2 = document.querySelector("#litBox2");
-  const litBox3 = document.querySelector("#litBox3");
   const slideTwoBox = document.querySelector(
     ".slide__slide-two .slide__text-box"
   );
@@ -1124,9 +1123,6 @@ function kioskLoad() {
   };
   const slideOneTopBox = document.querySelector(
     ".slide__slide-one__text-box__top"
-  );
-  const slideOneBottomBox = document.querySelector(
-    ".slide__slide-one__text-box__bottom"
   );
   const slide2PDFBoxes = document.querySelectorAll(
     ".kioskModal__content__inner-pdf"
@@ -1161,10 +1157,6 @@ function kioskLoad() {
   const sidebarHeading = document.querySelector("#sidebarHeading");
   const webModalTrigger = document.querySelector(".slide__slide-six__linkbox");
   const slideZeroVid = document.querySelector(".slide-zero-video");
-  const slideThreeVidBoxes = document.querySelectorAll(
-    ".slide__slide-three__videobox"
-  );
-  const slideThreeVidLen = slideThreeVidBoxes.length;
   const settingsBoxes = document.querySelectorAll(
     ".kioskModal__content__inner__top-top"
   );
@@ -1189,14 +1181,13 @@ function kioskLoad() {
     ".kioskModal__content__inner__top-top-scrollBox"
   );
   const slideFiveLitBox = document.querySelector(".slide__slide-five__lit-box");
-  const slidethreemenu = document.querySelector(
-    ".slide__slide-three__videobox-menu"
-  );
-  const slidethreemenuitems = document.querySelectorAll(
-    ".slide__slide-three__videobox-menu-item"
-  );
   const slideFiveTouch = document.querySelector("#slideFiveTouch");
   const gestureZone = document.getElementById("slideOneTouch");
+  const gestureZone2 = document.getElementById("slideThreeTouch");
+  const slideThreeZone = document.querySelector(
+    ".slide__slide-three .slide__text-box"
+  );
+  const slideHeader = document.querySelector(".slide__slide-three__header p");
 
   // Drag guards
   winCon.addEventListener("touchstart", (e) => {
@@ -1789,6 +1780,7 @@ function kioskLoad() {
 
   // Video modal triggers
   function videoModalPopup() {
+    console.log(touchid);
     let touchfind = "#" + touchid;
     let touchfinder = document.querySelector(touchfind);
     if (
@@ -2055,120 +2047,203 @@ function kioskLoad() {
 
   // SLIDE THREE
   function slideThreeActive() {
-    slideThreeVidBoxes.forEach((i) => {
-      if (i.dataset.origpos === "1") {
-        i.classList.add("show");
-      }
-      i.querySelector("video").load();
-    });
-    slidethreemenuitems.forEach((i) => {
-      if (i.dataset.position === "1") {
-        i.classList.add("active");
-        i.querySelector(
-          ".slide__slide-three__videobox-menu-item-text"
-        ).classList.add("active");
-      } else {
-        i.classList.remove("active");
-        i.querySelector(
-          ".slide__slide-three__videobox-menu-item-text"
-        ).classList.remove("active");
-      }
-    });
+    slideThreeZone.classList.add("show");
+    gestureZone2.classList.add("show");
+    slideHeader.classList.add("show");
   }
 
   function slideThreeDeactive() {
-    slideThreeVidBoxes.forEach((i) => {
-      i.classList.remove("show");
-      i.querySelector("video").pause();
-    });
+    slideThreeZone.classList.remove("show");
+    gestureZone2.classList.remove("show");
+    slideHeader.classList.remove("show");
   }
 
-  // Swipe actions for videos
-  function slideThreeHandleGest(direction) {
-    let activeSlide3;
-    let nextSlide3;
-    for (let i = 0; i < slideThreeVidLen; i++) {
-      if (slideThreeVidBoxes[i].classList.contains("show")) {
-        activeSlide3 = i;
-        if (direction === "left") {
-          nextSlide3 = activeSlide3 + 1;
-          if (nextSlide3 === slideThreeVidLen) nextSlide3 = 0;
-        } else {
-          nextSlide3 = activeSlide3 - 1;
-          if (nextSlide3 === -1) nextSlide3 = slideThreeVidLen - 1;
-        }
-        slideThreeVidBoxes[i].querySelector("video").pause();
-        slideThreeVidBoxes[i].classList.toggle("show");
-        slideThreeVidBoxes[nextSlide3].classList.toggle("show");
-        slideThreeVidBoxes[nextSlide3].querySelector("video").load();
-        slideThreeVidBoxes[nextSlide3].querySelector("video").play();
+  let touchstartY3 = 0;
+  let touchendY3 = 0;
+  let touchid3;
+  let swipeDistance3;
+  let touchStop13 = false;
+  let touchStop23 = false;
+  let touchStop33 = false;
+  let touchStop43 = false;
+  let touchPoint3;
+  let initalDirection3;
+  let nowDirection3;
 
-        let slideData = slideThreeVidBoxes[nextSlide3].dataset.position;
-        slidethreemenuitems.forEach((i) => {
-          if (slideData === i.dataset.position) {
-            i.classList.add("active");
-            i.querySelector("p").classList.add("active");
-          } else {
-            i.classList.remove("active");
-            i.querySelector("p").classList.remove("active");
-          }
-        });
-        break;
-      }
-    }
-  }
+  gestureZone2.addEventListener(
+    "touchstart",
+    function (event) {
+      swipeDistance3 = 0;
+      touchPoint3 = 0;
+      initalDirection3 = "";
+      nowDirection3 = "";
+      touchstartY3 = event.changedTouches[0].screenY;
+    },
+    false
+  );
 
-  slideThreeVidBoxes.forEach((i) => {
-    let vidActive = false;
-    let starttouchXThree;
-    let endtouchXThree;
-    let boxVid = i.querySelector("video");
-    i.addEventListener("touchstart", (e) => {
-      if (vidActive) {
-        boxVid.play();
-        vidActive = false;
+  gestureZone2.addEventListener(
+    "touchmove",
+    (e) => {
+      swipeDistance3 = touchstartY3 - e.changedTouches[0].screenY;
+      if (swipeDistance3 > touchPoint3) {
+        initalDirection3 = "up";
       } else {
-        boxVid.pause();
-        vidActive = true;
+        initalDirection3 = "down";
       }
-      starttouchXThree = e.changedTouches[0].screenX;
-    });
-
-    i.addEventListener("touchend", (e) => {
-      endtouchXThree = e.changedTouches[0].screenX;
-      distThreeGest = starttouchXThree - endtouchXThree;
-      if (distThreeGest < -100 || distThreeGest > 100) {
-        slideThreeHandleGest(distThreeGest < 0 ? "right" : "left");
+      if (!touchStop13) {
+        if (swipeDistance3 < -10 || swipeDistance3 > 10) {
+          touchStop13 = true;
+          handleGesture3(swipeDistance3);
+        }
       }
-    });
-  });
+      if (!touchStop23) {
+        if (
+          (swipeDistance3 > -125 && swipeDistance3 < -70) ||
+          (swipeDistance3 > 70 && swipeDistance3 < 125)
+        ) {
+          touchStop23 = true;
+          handleGesture3(swipeDistance3);
+        }
+      }
+      if (!touchStop33) {
+        if (
+          (swipeDistance3 > -250 && swipeDistance3 < -125) ||
+          (swipeDistance3 > 125 && swipeDistance3 < 250)
+        ) {
+          touchStop33 = true;
+          handleGesture3(swipeDistance3);
+        }
+      }
+      if (!touchStop43) {
+        if (
+          (swipeDistance3 > -400 && swipeDistance3 < -250) ||
+          (swipeDistance3 > 250 && swipeDistance3 < 400)
+        ) {
+          touchStop43 = true;
+          handleGesture3(swipeDistance3);
+        }
+      }
+      if (nowDirection3 !== initalDirection3 && nowDirection3 !== "") {
+        touchstartY3 = e.changedTouches[0].screenY;
+        if (touchStop13) touchStop13 = false;
+        if (touchStop23) touchStop23 = false;
+        if (touchStop33) touchStop33 = false;
+        if (touchStop43) touchStop43 = false;
+      }
+      touchPoint3 = swipeDistance3;
+      nowDirection3 = initalDirection3;
+    },
+    false
+  );
 
-  // Menu buttons
-  slidethreemenu.addEventListener("touchstart", (e) => {
-    let touchData = e.target.dataset.position;
-    if (touchData) {
-      slidethreemenuitems.forEach((i) => {
-        let stepData = i.dataset.position;
-        if (stepData === touchData) {
-          i.classList.add("active");
-          i.querySelector("p").classList.add("active");
-        } else {
-          i.classList.remove("active");
-          i.querySelector("p").classList.remove("active");
-        }
-      });
-      slideThreeVidBoxes.forEach((i) => {
-        if (i.dataset.position === touchData) {
-          i.classList.add("show");
-          i.querySelector("video").load();
-          i.querySelector("video").play();
-        } else {
-          i.classList.remove("show");
-          i.querySelector("video").pause();
-        }
-      });
+  gestureZone2.addEventListener(
+    "touchend",
+    function (event) {
+      touchStop13 = false;
+      touchStop23 = false;
+      touchStop33 = false;
+      touchStop43 = false;
+      touchPoint3 = 0;
+      touchendY3 = event.changedTouches[0].screenY;
+      touchid3 = event.target.id;
+      touchstate3 = event.target.dataset.currentpos;
+      handleGesture3(touchstartY3 - touchendY3, "stop");
+    },
+    false
+  );
+
+  function handleGesture3(distance3, stopper3 = "go") {
+    if (stopper3 === "go") {
+      slideThreeScroller(distance3);
+    } else {
+      if (distance3 > -5 && distance3 < 5) {
+        videoModalPopup3();
+      }
     }
-  });
+  }
+
+  function slideThreeScroller(d) {
+    let allSlots = document.querySelectorAll("#slideThreeTouch p");
+    for (let i of allSlots) {
+      let slotPOS3 = i.dataset.currentpos;
+      if (slotPOS3 === "0") {
+        if (d > 0) {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotThree", "scrollUp033");
+          i.dataset.currentpos = "3";
+        } else {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotOne", "scrollDown013");
+          i.dataset.currentpos = "1";
+        }
+      }
+      if (slotPOS3 === "1") {
+        if (d > 0) {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotZero", "scrollUp103");
+          i.dataset.currentpos = "0";
+        } else {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotTwo", "scrollDown123");
+          i.dataset.currentpos = "2";
+        }
+      }
+      if (slotPOS3 === "2") {
+        if (d > 0) {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotOne", "scrollUp213");
+          i.dataset.currentpos = "1";
+        } else {
+          i.setAttribute("class", "");
+          i.classList.add(
+            "scrollMenu",
+            "scrollMenu3SlotThree",
+            "scrollDown233"
+          );
+          i.dataset.currentpos = "3";
+        }
+      }
+      if (slotPOS3 === "3") {
+        if (d > 0) {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotTwo", "scrollUp323");
+          i.dataset.currentpos = "2";
+        } else {
+          i.setAttribute("class", "");
+          i.classList.add("scrollMenu", "scrollMenu3SlotZero", "scrollDown303");
+          i.dataset.currentpos = "0";
+        }
+      }
+    }
+  }
+
+  // Video modal triggers
+  function videoModalPopup3() {
+    console.log(touchid3);
+    let touchfind3 = "#" + touchid3;
+    let touchfinder3 = document.querySelector(touchfind3);
+    if (
+      touchfinder3.classList.contains("scrollMenu") ||
+      touchfinder3.classList.contains("scrollMenu2")
+    ) {
+      kioskModal.classList.remove("noshow");
+      kioskModal.classList.remove("noshow2");
+      kioskModal.classList.add("show");
+      let targetVideo = "#" + touchfinder3.dataset.videoid;
+      document.querySelector(targetVideo).classList.remove("noshow");
+      document.querySelector(targetVideo).classList.add("show");
+      document.querySelector(targetVideo).children[0].classList.add("show");
+      let kioskTitleChange = document.querySelector(".kioskModal__content h2");
+      kioskTitleChange.innerText = touchfinder3.innerText;
+      videoplaying = true;
+      const vidBox = document.querySelector(
+        ".kioskModal__content__inner.show video"
+      );
+      vidBox.load();
+      vidBox.play();
+    }
+  }
 
   // SLIDE FOUR
   // Effects
@@ -2739,10 +2814,10 @@ function kioskLoad() {
   function valPasswd(p) {
     p = btoa(p);
     // Production - password enabled - pass1234
-    if (p == "cGFzczEyMzQ=") {
+    /* if (p == "cGFzczEyMzQ=") {
       return true;
     }
-    return false;
+    return false; */
     // Dev - blank password
     if (p == "") {
       return true;
@@ -3403,6 +3478,42 @@ function kioskLoad() {
   }
 }
 
+// Keyboard Hide / Show
+let kbState = 1;
+const keyHider = document.querySelector("#hideKeyboard");
+const textWindows = document.querySelectorAll(
+  ".kioskModal__content__inner__top-top"
+);
+const textWinScroll = document.querySelector(
+  ".kioskModal__content__inner__top-top-scrollBox"
+);
+const keyScreen = document.querySelector(
+  ".kioskModal__content__inner__top-bottom"
+);
+const keyOuter = document.querySelector(
+  ".kioskModal__content__inner__top-bottom-keyboard"
+);
+keyHider.addEventListener("touchstart", () => {
+  textWindows.forEach((i) => {
+    i.classList.toggle("showH");
+  });
+  keyScreen.classList.toggle("showH");
+  if (kbState) {
+    textWinScroll.classList.toggle("showH");
+    keyOuter.style.display = "none";
+    keyHider.innerText = "Show Keyboard";
+    kbState = 0;
+  } else {
+    setTimeout(() => {
+      textWinScroll.classList.toggle("showH");
+    }, 500);
+    keyOuter.style.display = "flex";
+    keyHider.innerText = "Hide Keyboard";
+    kbState = 1;
+  }
+});
+
+// Some initial variables
 const winCon = document.querySelector(".container");
 const loadCon = document.querySelector(".loading-container");
 // Clear localstorage on every run - testing only - comment out for production
@@ -3412,4 +3523,4 @@ setTimeout(() => {
   loadCon.classList.toggle("show");
   winCon.classList.toggle("show");
   kioskLoad();
-}, 30000);
+}, 1000);

@@ -1,4 +1,4 @@
-# legendary-spoon
+# Norix Kiosk
 
 In-house kiosk design for Norix Group Inc. by Phillip Clapham and ForeFront Web.
 

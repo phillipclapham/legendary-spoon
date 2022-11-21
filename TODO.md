@@ -1,6 +1,11 @@
 # To-Do:
 
-- Last 4 OID vids
+- Change out video slide with infinite scroller
+- Do a code coverage test
+
+# Bugs
+
+- Uppercase delete / select not working properly
 
 # For Production
 
