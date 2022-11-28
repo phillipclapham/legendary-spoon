@@ -2857,7 +2857,7 @@ function kioskLoad() {
   function handleKeyboard(key) {
     if (activeBox) {
       if (key === "delete") {
-        if (capsState === "lower" && !activeBox.classList.contains("active")) {
+        if (!activeBox.classList.contains("active")) {
           let activeText = activeBox.innerText.split("");
           let atLen = activeText.length - 1;
           if (atLen >= 0) {
@@ -2865,10 +2865,7 @@ function kioskLoad() {
             activeText = activeText.join("");
             activeBox.innerText = activeText;
           }
-        } else if (
-          capsState === "lower" &&
-          activeBox.classList.contains("active")
-        ) {
+        } else if (activeBox.classList.contains("active")) {
           activeBox.innerText = "";
           activeBox.classList.remove("active");
         } else {
