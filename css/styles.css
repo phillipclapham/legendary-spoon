@@ -812,7 +812,7 @@ a {
   height: 100%;
   width: 0%;
   background: var(--brand-textcolor-light);
-  animation: growUp 30s;
+  animation: growUp 60s linear;
   border-radius: 25px;
 }
 
@@ -820,7 +820,7 @@ a {
   height: 100%;
   width: 100%;
   background: transparent;
-  animation: growDown 30s;
+  animation: growDown 60s linear;
   border-radius: 25px;
 }
 
