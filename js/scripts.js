@@ -2810,10 +2810,10 @@ function kioskLoad() {
   function valPasswd(p) {
     p = btoa(p);
     // Production - password enabled - pass1234
-    /* if (p == "cGFzczEyMzQ=") {
+    if (p == "cGFzczEyMzQ=") {
       return true;
     }
-    return false; */
+    return false;
     // Dev - blank password
     if (p == "") {
       return true;
@@ -3526,4 +3526,4 @@ setTimeout(() => {
   loadCon.classList.toggle("show");
   winCon.classList.toggle("show");
   kioskLoad();
-}, 0);
+}, 60000);
