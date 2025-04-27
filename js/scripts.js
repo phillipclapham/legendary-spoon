@@ -159,22 +159,22 @@ function kioskInitialize() {
   }
   let litblock3slot1title = localStorage.getItem("litblock3slot1title");
   if (!litblock3slot1title) {
-    litblock3slot1title = "ARCADIAN BROCHURE";
+    litblock3slot1title = "RESPITE BROCHURE";
     localStorage.setItem("litblock3slot1title", litblock3slot1title);
   }
   let litblock3slot2title = localStorage.getItem("litblock3slot2title");
   if (!litblock3slot2title) {
-    litblock3slot2title = "PRODIGY BROCHURE";
+    litblock3slot2title = "FENIX BROCHURE";
     localStorage.setItem("litblock3slot2title", litblock3slot2title);
   }
   let litblock3slot3title = localStorage.getItem("litblock3slot3title");
   if (!litblock3slot3title) {
-    litblock3slot3title = "PAX BROCHURE";
+    litblock3slot3title = "RIPPLE BROCHURE";
     localStorage.setItem("litblock3slot3title", litblock3slot3title);
   }
   let litblock3slot4title = localStorage.getItem("litblock3slot4title");
   if (!litblock3slot4title) {
-    litblock3slot4title = "MAX-MASTER BROCHURE";
+    litblock3slot4title = "EVVOLVE BROCHURE";
     localStorage.setItem("litblock3slot4title", litblock3slot4title);
   }
 
@@ -383,7 +383,7 @@ function kioskInitialize() {
   let litblock2slot1img = localStorage.getItem("litblock2slot1img");
   if (!litblock2slot1img) {
     litblock2slot1img =
-      "https://norix.com/wp-content/uploads/2024/08/DesignGuide_Thumbnail.jpg";
+      "https://norix.com/wp-content/uploads/2025/04/DesignGuide_Thumbnail.jpg";
     localStorage.setItem("litblock2slot1img", litblock2slot1img);
   }
   let litblock2slot2img = localStorage.getItem("litblock2slot2img");
@@ -395,7 +395,7 @@ function kioskInitialize() {
   let litblock2slot3img = localStorage.getItem("litblock2slot3img");
   if (!litblock2slot3img) {
     litblock2slot3img =
-      "https://norix.com/wp-content/uploads/2024/08/SeatingGuide_Thumbnail.jpg";
+      "https://norix.com/wp-content/uploads/2025/04/SeatingGuide_Thumbnail.jpg";
     localStorage.setItem("litblock2slot3img", litblock2slot3img);
   }
   let litblock2slot4img = localStorage.getItem("litblock2slot4img");
@@ -407,25 +407,25 @@ function kioskInitialize() {
   let litblock3slot1img = localStorage.getItem("litblock3slot1img");
   if (!litblock3slot1img) {
     litblock3slot1img =
-      "https://norix.com/wp-content/uploads/2024/08/Arcadian_Thumbnail.jpg";
+      "https://norix.com/wp-content/uploads/2025/04/Respite_Thumbnail.jpg";
     localStorage.setItem("litblock3slot1img", litblock3slot1img);
   }
   let litblock3slot2img = localStorage.getItem("litblock3slot2img");
   if (!litblock3slot2img) {
     litblock3slot2img =
-      "https://norix.com/wp-content/uploads/2024/08/Prodigy_Thumbnail.jpg";
+      "https://norix.com/wp-content/uploads/2025/04/Fenix_Thumbnail.jpg";
     localStorage.setItem("litblock3slot2img", litblock3slot2img);
   }
   let litblock3slot3img = localStorage.getItem("litblock3slot3img");
   if (!litblock3slot3img) {
     litblock3slot3img =
-      "https://norix.com/wp-content/uploads/2024/08/Pax_Thumbnail.jpg";
+      "https://norix.com/wp-content/uploads/2025/04/Ripple_Thumbnail.jpg";
     localStorage.setItem("litblock3slot3img", litblock3slot3img);
   }
   let litblock3slot4img = localStorage.getItem("litblock3slot4img");
   if (!litblock3slot4img) {
     litblock3slot4img =
-      "https://norix.com/wp-content/uploads/2024/08/MaxMaster_Thumbnail.jpg";
+      "https://norix.com/wp-content/uploads/2025/04/Evvolve_Thumbnail.jpg";
     localStorage.setItem("litblock3slot4img", litblock3slot4img);
   }
 
@@ -433,19 +433,19 @@ function kioskInitialize() {
   let litblock1slot1pdf = localStorage.getItem("litblock1slot1pdf");
   if (!litblock1slot1pdf) {
     litblock1slot1pdf =
-      "https://drive.google.com/file/d/1omgAE9bcI9J9JdoSP5RIQJ_kQhja0MwZ/preview";
+      "https://drive.google.com/file/d/1_Eq89wSG0_KnxEDTOJ769ISQS0gM6c-c/preview";
     localStorage.setItem("litblock1slot1pdf", litblock1slot1pdf);
   }
   let litblock1slot2pdf = localStorage.getItem("litblock1slot2pdf");
   if (!litblock1slot2pdf) {
     litblock1slot2pdf =
-      "https://drive.google.com/file/d/1UzHL_3i86UwWKjNMHsPBsyBLvYodLQMQ/preview";
+      "https://drive.google.com/file/d/1Eiz2VgdjINl3fk0jCiMKYy-xICgjSQ_Y/preview";
     localStorage.setItem("litblock1slot2pdf", litblock1slot2pdf);
   }
   let litblock1slot3pdf = localStorage.getItem("litblock1slot3pdf");
   if (!litblock1slot3pdf) {
     litblock1slot3pdf =
-      "https://drive.google.com/file/d/1eQHtNxsizgypYUuziEui6UOVN2qM0Lhk/preview";
+      "https://drive.google.com/file/d/1GftQH__H9Ho2frg2RxwGqCjBSiR-l8m-/preview";
     localStorage.setItem("litblock1slot3pdf", litblock1slot3pdf);
   }
   let litblock1slot4pdf = localStorage.getItem("litblock1slot4pdf");
@@ -456,7 +456,7 @@ function kioskInitialize() {
   let litblock2slot1pdf = localStorage.getItem("litblock2slot1pdf");
   if (!litblock2slot1pdf) {
     litblock2slot1pdf =
-      "https://drive.google.com/file/d/1CVrtbc3Bs7S4WL0R8jydWDCYWD_e6UQG/preview";
+      "https://drive.google.com/file/d/1ScxIN9gkm3lmc--Vi4kbdYDc-nckMREZ/preview";
     localStorage.setItem("litblock2slot1pdf", litblock2slot1pdf);
   }
   let litblock2slot2pdf = localStorage.getItem("litblock2slot2pdf");
@@ -468,7 +468,7 @@ function kioskInitialize() {
   let litblock2slot3pdf = localStorage.getItem("litblock2slot3pdf");
   if (!litblock2slot3pdf) {
     litblock2slot3pdf =
-      "https://drive.google.com/file/d/1wqfP1HJ50EHIeS-S9jt-l6MGjO5ztrDO/preview";
+      "https://drive.google.com/file/d/10QM1RJcXbWTC8N09LVJuX3GF26pxkytG/preview";
     localStorage.setItem("litblock2slot3pdf", litblock2slot3pdf);
   }
   let litblock2slot4pdf = localStorage.getItem("litblock2slot4pdf");
@@ -480,25 +480,25 @@ function kioskInitialize() {
   let litblock3slot1pdf = localStorage.getItem("litblock3slot1pdf");
   if (!litblock3slot1pdf) {
     litblock3slot1pdf =
-      "https://drive.google.com/file/d/1jnYFOazL4pDBXaSKe0WLIHAE00l7spin/preview";
+      "https://drive.google.com/file/d/1_isdIqcfTaUp7n31RPf62kyGqbQjjzr2/preview";
     localStorage.setItem("litblock3slot1pdf", litblock3slot1pdf);
   }
   let litblock3slot2pdf = localStorage.getItem("litblock3slot2pdf");
   if (!litblock3slot2pdf) {
     litblock3slot2pdf =
-      "https://drive.google.com/file/d/1hJPBA_3f_AiknjiY-PDvBP1ZrntVAjeC/preview";
+      "https://drive.google.com/file/d/1bXFKdqx84kp7-bwaX4RokyMBrZFvoCVs/preview";
     localStorage.setItem("litblock3slot2pdf", litblock3slot2pdf);
   }
   let litblock3slot3pdf = localStorage.getItem("litblock3slot3pdf");
   if (!litblock3slot3pdf) {
     litblock3slot3pdf =
-      "https://drive.google.com/file/d/1LedGhcR6owpQ6Cri7tyEFjrd5hj-5sVT/preview";
+      "https://drive.google.com/file/d/1lH5YO4g65e6iBYhizADG--bA-e2UOXNp/preview";
     localStorage.setItem("litblock3slot3pdf", litblock3slot3pdf);
   }
   let litblock3slot4pdf = localStorage.getItem("litblock3slot4pdf");
   if (!litblock3slot4pdf) {
     litblock3slot4pdf =
-      "https://drive.google.com/file/d/11skUqtRIDKrN02AssZi8I9joZ6Wx2O5R/preview";
+      "https://drive.google.com/file/d/1J6wtDc2twDtg2blNgdRLpCZJcCIq90Jg/preview";
     localStorage.setItem("litblock3slot4pdf", litblock3slot4pdf);
   }
 
@@ -506,7 +506,7 @@ function kioskInitialize() {
   let vidvid1link = localStorage.getItem("vidvid1link");
   if (!vidvid1link) {
     vidvid1link =
-      "https://norix.com/wp-content/uploads/2022/04/Titan_Product_Promo-compressed.mp4";
+      "https://norix.com/wp-content/uploads/2025/04/Titan_MultiPurpose_Promo.mp4";
     localStorage.setItem("vidvid1link", vidvid1link);
   }
   let vidvid2link = localStorage.getItem("vidvid2link");
@@ -3526,4 +3526,4 @@ setTimeout(() => {
   loadCon.classList.toggle("show");
   winCon.classList.toggle("show");
   kioskLoad();
-}, 60000);
+}, 90000);
